@@ -48,15 +48,15 @@
 	],
 	"languages": [
 		"Common",
+		"Druidic (can read and write but not speak)",
 		"Kreen",
 		"Sylvan",
-		"Druidic (can read and write but not speak)",
 		"telepathy 120ft."
 	],
 	"languageTags": [
 		"C",
-		"S",
 		"DU",
+		"S",
 		"TP"
 	],
 	"save": {
@@ -92,7 +92,6 @@
 					"spells": [
 						"{@spell chill touch}",
 						"{@spell infestation|XGE}",
-						"{@spell mage hand}",
 						"{@spell shillelagh}",
 						"{@spell thorn whip}"
 					]
@@ -138,11 +137,33 @@
 			"type": "spellcasting"
 		},
 		{
-			"name": "Innate Spellcasting",
+			"name": "Innate Spellcasting (Psionics)",
 			"daily": {
 				"1e": [
 					"{@spell freedom of movement}",
 					"{@spell invisibility}"
+				]
+			},
+			"will": [
+				"{@spell mage hand}"
+			],
+			"type": "spellcasting"
+		},
+		{
+			"name": "Armor of the Shapechanger",
+			"daily": {
+				"1e": [
+					"{@spell disguise self}"
+				]
+			},
+			"type": "spellcasting"
+		},
+		{
+			"name": "Bog Staff",
+			"rest": {
+				"1e": [
+					"{@spell create or destroy water}",
+					"{@spell ray of sickness}"
 				]
 			},
 			"type": "spellcasting"
@@ -150,7 +171,9 @@
 	],
 	"spellcastingTags": [
 		"CD",
-		"I"
+		"P",
+		"I",
+		"O"
 	],
 	"trait": [
 		{
@@ -170,6 +193,18 @@
 			"entries": [
 				"As with other kreen, Ptekwe has 2 minor arms just under her major pair, which can be used to manipulate small objects, wield weapons with the light property, and lift up to 10 pounds each."
 			]
+		},
+		{
+			"name": "Heavy Shell",
+			"entries": [
+				"Spells or actions that depend on Ptekwe's weight automatically fail if they cannot move at least 450 pounds."
+			]
+		},
+		{
+			"name": "Kreen Agility",
+			"entries": [
+				"Ptekwe can make a running long jump or high jump after moving only 5 feet."
+			]
 		}
 	],
 	"isNamedCreature": true,
@@ -183,19 +218,17 @@
 		{
 			"name": "Spellcasting",
 			"entries": [
-				"Ptekwe casts 1 spell through her Bog Staff."
+				"Ptekwe may take any of the following actions:",
+				"Cast Create Water or Ray of Sickness from the Bog Staff without expending a spell slot",
+				"Cast any 3rd level or lower spell from the Dread Scimitar without expending a spell slot",
+				"Cast Disguise Self from the Armor of The Shapechanger without expending a spell slot",
+				"Cast any prepared Druid spell normally, using her staff as a focus"
 			]
 		},
 		{
 			"name": "Dread Scimitar",
 			"entries": [
 				"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}21 ({@damage 1d12 + 15}) slashing damage, plus 4 ({@damage 1d8}) necrotic damage."
-			]
-		},
-		{
-			"name": "Dread Spell",
-			"entries": [
-				"Ptekwe casts 1 spell at 3rd level using her Dread Scimitar as a focus. This does not expend any spell slots. 1/short rest"
 			]
 		},
 		{
@@ -214,9 +247,9 @@
 			]
 		},
 		{
-			"name": "Chameleon Carapace",
+			"name": "Hell Rider",
 			"entries": [
-				"If Ptekwe is wearing no armor, she shifts the colors and texture of her exoskeleton, giving her advantage on Stealth (Dexterity) checks."
+				"Ptekwe flashes a red glowing crystal, and a Nightmare leaps forth for her to mount."
 			]
 		}
 	],
@@ -243,6 +276,12 @@
 			"entries": [
 				"Elemental energy courses through Ptekwe's body, allowing her to add {@damage 2d6} elemental damage of any type to her next melee attack. This effect does not stack, and costs 1 use of Wild Shape."
 			]
+		},
+		{
+			"name": "Chameleon Carapace",
+			"entries": [
+				"If Ptekwe is wearing no armor, she shifts the colors and texture of her exoskeleton, giving her advantage on Stealth (Dexterity) checks."
+			]
 		}
 	],
 	"reaction": [
@@ -266,6 +305,18 @@
 		}
 	],
 	"pbNote": "+3",
+	"legendary": [
+		{
+			"name": "Myrkul's Servant",
+			"entries": [
+				"Ptekwe calls upon the aid of The Lord of Bones, Myrkul. She is empowered and strengthened in her time of need. Effect is determined by the DM."
+			]
+		}
+	],
+	"legendaryActions": 1,
+	"legendaryHeader": [
+		"Ptekwe can take 1 legendary action in her lifetime. It can be used at any moment, and will instantly turn the tides of any battle."
+	],
 	"damageTags": [
 		"B",
 		"N",
