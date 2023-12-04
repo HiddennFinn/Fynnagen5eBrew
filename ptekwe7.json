@@ -31,14 +31,13 @@
 			"condition": "(Freedom of Movement)"
 		}
 	},
-	"str": 7,
+	"str": 14,
 	"dex": 20,
 	"con": 14,
 	"int": 14,
 	"wis": 18,
-	"cha": 14,
+	"cha": 7,
 	"passive": 17,
-	"cr": "2",
 	"page": 1,
 	"senses": [
 		"darkvision 60 ft."
@@ -69,9 +68,9 @@
 		"insight": "+7",
 		"medicine": "+7",
 		"perception": "+7",
-		"persuasion": "+7",
 		"religion": "+5",
-		"survival": "+7"
+		"survival": "+7",
+		"persuasion": "+3"
 	},
 	"conditionImmune": [
 		{
@@ -85,7 +84,7 @@
 		{
 			"name": "Spellcasting",
 			"headerEntries": [
-				"Ptekwe is a Circle of Spores Druid, granting her access to the following spells."
+				"Ptekwe is a Circle of Spores Druid, allowing her access to the following spells."
 			],
 			"spells": {
 				"0": {
@@ -203,7 +202,21 @@
 		{
 			"name": "Kreen Agility",
 			"entries": [
-				"Ptekwe can make a running long jump or high jump after moving only 5 feet."
+				"Ptekwe's long jump is up to 30 feet and her high jump is up to 15 feet, with or without a running start."
+			]
+		},
+		{
+			"name": "Death Defying",
+			"entries": [
+				"If one of Ptekwe's allies is wounded, she bends fate in their favor by increasing the power of her healing spells.",
+				"Target has 1/2 HP or less: Ptekwe's spells heal an extra 2 HP.",
+				"Target has 1/4 HP or less: Ptekwe's spells heal an extra 4 HP."
+			]
+		},
+		{
+			"name": "Shield of Heart Attack",
+			"entries": [
+				"Any time an enemy succeeds in melee attacking Ptekwe, they must roll {@dice 1d100}. If the roll is higher than 94, the enemy collapses and dies from cardiac arrest. This automatically fails on creatures that lack hearts."
 			]
 		}
 	],
@@ -251,6 +264,18 @@
 			"entries": [
 				"Ptekwe flashes a red glowing crystal, and a Nightmare leaps forth for her to mount."
 			]
+		},
+		{
+			"name": "Drain Vitality",
+			"entries": [
+				"Ptekwe causes necrotic energy to congeal around a target she can see within 30ft. The target takes {@damage 2d12} necrotic damage, and Ptekwe heals the amount of damage dealt. This action may be used once per long rest."
+			]
+		},
+		{
+			"name": "Dark Rune",
+			"entries": [
+				"A rune carved into Ptekwe's left major shoulder emanates dark energy and a shadow tentacle erupts from its center. If an enemy no more than 1 size larger than Ptekwe is within 5ft of her, it must make a {@dc 14} strength saving throw or be {@condition grappled} and take {@damage 3d6} force damage."
+			]
 		}
 	],
 	"miscTags": [
@@ -263,7 +288,6 @@
 		"swamp",
 		"urban"
 	],
-	"isNpc": true,
 	"bonus": [
 		{
 			"name": "Dual Wielding",
@@ -302,6 +326,12 @@
 			"entries": [
 				"Ptekwe spaces out and mumbles about future destruction. 1 hostile creature of Ptekwe's choice within 20ft of her must make a {@dc 17}+ wisdom saving throw or gain disadvantage on its next attack roll."
 			]
+		},
+		{
+			"name": "Fate Swayer",
+			"entries": [
+				"If dealt damage that would down (not kill) her, Ptekwe can expend 2 uses of her Wild Shape feature to grip fate's reins and drag it in her favor. She barely endures the would-be fatal blow on 1 hit point and gains a {@dice 1d6} bonus to Chaotic Resonance."
+			]
 		}
 	],
 	"pbNote": "+3",
@@ -317,6 +347,19 @@
 	"legendaryHeader": [
 		"Ptekwe can take 1 legendary action in her lifetime. It can be used at any moment, and will instantly turn the tides of any battle."
 	],
+	"isNpc": true,
+	"traitTags": [
+		"Amphibious"
+	],
+	"conditionInflict": [
+		"grappled"
+	],
+	"actionHeader": [
+		"Ptekwe has a variety of tools and tricks at her disposal."
+	],
+	"reactionHeader": [
+		"Ptekwe is highly reactive, watch your movements!"
+	],
 	"damageTags": [
 		"B",
 		"N",
@@ -330,6 +373,9 @@
 		"N",
 		"P",
 		"R"
+	],
+	"savingThrowForced": [
+		"strength"
 	],
 	"savingThrowForcedSpell": [
 		"constitution",
